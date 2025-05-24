@@ -17,6 +17,7 @@ require("config.lazy")  -- your plugin list lives here
 require("config.lsp")
 require("config.treesitter")
 require("config.harpoon")
+require("everforest").load()
 
 -- Enable line numbers and relative numbers
 vim.opt.number = true
