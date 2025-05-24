@@ -16,7 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 require("config.lazy")  -- your plugin list lives here
 require("config.lsp")
 require("config.treesitter")
-
+require("config.harpoon")
 
 -- Enable line numbers and relative numbers
 vim.opt.number = true
@@ -67,3 +67,20 @@ vim.keymap.set("n", "<leader>fg", require("telescope.builtin").live_grep, {})
 vim.keymap.set("n", "<leader>gd", require("telescope.builtin").lsp_definitions)
 vim.keymap.set("n", "<leader>gr", require("telescope.builtin").lsp_references)
 vim.keymap.set("n", "<leader>gi", require("telescope.builtin").lsp_implementations)
+
+
+local harpoon = require("harpoon")
+
+vim.keymap.set("n", "<leader>a", function() harpoon:list():append() end, { desc = "Add file to Harpoon" })
+vim.keymap.set("n", "<leader>h", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Open Harpoon UI" })
+vim.keymap.set("n", "<leader>1", function() harpoon:list():select(1) end, { desc = "Go to file 1" })
+vim.keymap.set("n", "<leader>2", function() harpoon:list():select(2) end, { desc = "Go to file 2" })
+vim.keymap.set("n", "<leader>3", function() harpoon:list():select(3) end, { desc = "Go to file 3" })
+vim.keymap.set("n", "<leader>4", function() harpoon:list():select(4) end, { desc = "Go to file 4" })
+
+-- Remove the current buffer/file from Harpoon list
+vim.keymap.set("n", "<leader>d1", function() harpoon:list():remove_at(1) end, { desc = "([D]elete) Remove file [1] from Harpoon list" })
+vim.keymap.set("n", "<leader>d2", function() harpoon:list():remove_at(1) end, { desc = "([D]elete) Remove file [2] from Harpoon list" })
+vim.keymap.set("n", "<leader>d3", function() harpoon:list():remove_at(1) end, { desc = "([D]elete) Remove file [3] from Harpoon list" })
+vim.keymap.set("n", "<leader>d4", function() harpoon:list():remove_at(1) end, { desc = "([D]elete) Remove file [4] from Harpoon list" })
+

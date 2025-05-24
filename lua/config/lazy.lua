@@ -18,6 +18,9 @@ require("lazy").setup({
   -- Fuzzy finder (optional)
   { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
 
+    -- Harpoon
+    { "ThePrimeagen/harpoon", branch = "harpoon2", dependencies = { "nvim-lua/plenary.nvim" } },
+
   -- Status line (optional)
   { "nvim-lualine/lualine.nvim" },
 })
