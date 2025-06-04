@@ -81,7 +81,7 @@ vim.keymap.set("n", "<leader>4", function() harpoon:list():select(4) end, { desc
 
 -- Remove the current buffer/file from Harpoon list
 vim.keymap.set("n", "<leader>d1", function() harpoon:list():remove_at(1) end, { desc = "([D]elete) Remove file [1] from Harpoon list" })
-vim.keymap.set("n", "<leader>d2", function() harpoon:list():remove_at(1) end, { desc = "([D]elete) Remove file [2] from Harpoon list" })
-vim.keymap.set("n", "<leader>d3", function() harpoon:list():remove_at(1) end, { desc = "([D]elete) Remove file [3] from Harpoon list" })
-vim.keymap.set("n", "<leader>d4", function() harpoon:list():remove_at(1) end, { desc = "([D]elete) Remove file [4] from Harpoon list" })
+vim.keymap.set("n", "<leader>d2", function() harpoon:list():remove_at(2) end, { desc = "([D]elete) Remove file [2] from Harpoon list" })
+vim.keymap.set("n", "<leader>d3", function() harpoon:list():remove_at(3) end, { desc = "([D]elete) Remove file [3] from Harpoon list" })
+vim.keymap.set("n", "<leader>d4", function() harpoon:list():remove_at(4) end, { desc = "([D]elete) Remove file [4] from Harpoon list" })
 
